@@ -4,5 +4,12 @@ $button-color: hsl(224, 93%, 58%);
 $link-text-color: hsl(170, 45%, 43%);
 $paragraph-text: hsl(0, 0%, 75%);
 $footer-text: hsl(240, 75%, 98%);
-
-
+@mixin primary-font {
+    font-family: 'Raleway', sans-serif;
+}
+@mixin secondary-font {
+    font-family: 'Open Sans', sans-serif;
+}
+@mixin border($color) {
+    border: 1px solid $color;
+}
