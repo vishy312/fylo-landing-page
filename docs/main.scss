@@ -9,8 +9,7 @@
   }
 }
 body {
-  width: 347px;
-  border: 1px solid black;
+  width: 375px;
   margin: auto;
 }
 
@@ -46,12 +45,13 @@ nav {
     text-align: center;
     font-weight: 700;
     font-size: 1.5rem;
+    color: $footerBg;
   }
   p {
     padding: 0.5em;
     text-align: center;
     @include secondary-font;
-    color: $info-cardBg;
+    color: $footerBg;
     font-size: 0.95rem;
   }
   form {
@@ -94,10 +94,12 @@ nav {
   h2 {
     font-weight: 700;
     text-align: center;
+    color: $footerBg;
   }
   p {
     text-align: left;
     padding: 0.5em;
+    color: $footerBg;
     @include secondary-font;
   }
   a {
@@ -119,7 +121,8 @@ nav {
   box-sizing: border-box;
   width: 80%;
   margin: 4em auto 0 auto;
-  @include border($paragraph-text);
+  font-weight: 700;
+
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
   padding: 20px;
   .quote-icon {
@@ -169,56 +172,149 @@ nav {
     line-height: 2;
   }
   form {
-      display: flex;
-      flex-direction: column;
-      width: 90%;
-      margin: auto;
-      input {
-          height: 40px;
-          font-size: 0.7rem;
-          padding-left: 1em;
-          box-sizing: border-box;
-          border-radius: 3px;
-          @include border($paragraph-text);
-      }
-      button {
-          height: 40px;
-          margin-top: 1em;
-          font-size: 0.7rem;
-          font-weight: 700;
-          color: white;
-          background-color: $button-color;
-          @include border($button-color);
-          border-radius: 3px;
-      }
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    input {
+      height: 40px;
+      font-size: 0.7rem;
+      padding-left: 1em;
+      box-sizing: border-box;
+      border-radius: 3px;
+      @include border($paragraph-text);
+    }
+    button {
+      height: 40px;
+      margin-top: 1em;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: white;
+      background-color: $button-color;
+      @include border($button-color);
+      border-radius: 3px;
+    }
   }
 }
 footer {
-    background-color: $footerBg;
-    color: $footer-text;
-    padding: 4em 2em 0 2em;
-    .logo-white {
-        filter: invert(27%) brightness(1000%);
+  background-color: $footerBg;
+  color: $footer-text;
+  padding: 4em 2em 0 2em;
+  .logo-white {
+    filter: invert(27%) brightness(1000%);
+  }
+  .phone,
+  .email {
+    display: flex;
+    align-items: center;
+    img {
+      margin-right: 1em;
+      width: 6%;
+      height: fit-content;
     }
-    .phone, .email {
-        display: flex;
-        align-items: center;
-        img {
-            margin-right: 1em;
-            width: 6%;
-            height: fit-content;
-        }
-    }
+  }
 }
 
 .ext-1 {
-    margin: 2em 0;
+  margin: 2em 0;
 }
 
 .social {
-    margin-left: 80px;
-    i {
-        margin: 2em 1em;
-    }
+  margin-left: 80px;
+  i {
+    margin: 2em 1em;
+  }
 }
+/* MEDIA QUERY */
 
+@media (min-width: 675px) {
+  body {
+    width: 1440px;
+    padding: 3em;
+    box-sizing: border-box;
+  }
+  .logo {
+    width: 13%;
+  }
+  ul {
+    width: 500px;
+    gap: 1em;
+  }
+
+  .card-1 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    img {
+      width: 50%;
+    }
+    .card-content {
+      width: 40%;
+    }
+    form {
+      flex-direction: row;
+      input {
+        width: 60%;
+      }
+      button {
+        width: 35%;
+      }
+    }
+  }
+  .card-2 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    .card-image {
+      width: 40%;
+    }
+    .card-content {
+      width: 50%;
+      h2 {
+        font-size: 2.5rem;
+      }
+      .icon-arrow {
+        width: 3%;
+      }
+      .review {
+        width: 50%;
+        margin: 4em 0 0 0;
+      }
+    }
+  }
+  .card-3 {
+    display: flex;
+    padding: 4em;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    .content {
+      width: 40%;
+      text-align: left;
+      h3 {
+        font-size: 2em;
+      }
+    }
+    form {
+      width: 40%;
+      margin: 0;
+      button {
+        width: 35%;
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    padding: 5em 4em 4em 4em;
+    gap: 10em;
+    align-items: center;
+    .extras {
+      display: flex;
+      align-items: baseline;
+      gap: 12em;
+    }
+  }
+}
