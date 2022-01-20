@@ -77,6 +77,10 @@ nav {
       box-sizing: border-box;
       margin: auto;
       border-radius: 3px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: hsl(217°, 92%, 74%);
     }
   }
 }
@@ -114,6 +118,9 @@ nav {
     width: 7%;
     position: relative;
     top: 6px;
+  }
+  a:hover {
+    opacity: 0.6;
   }
 }
 .review {
@@ -193,6 +200,10 @@ nav {
       background-color: $button-color;
       @include border($button-color);
       border-radius: 3px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: hsl(217°, 92%, 74%);
     }
   }
 }
@@ -214,7 +225,11 @@ footer {
     }
   }
 }
-
+.extras {
+  p:hover {
+    color: $info-cardBg;
+  }
+}
 .ext-1 {
   margin: 2em 0;
 }
@@ -223,6 +238,9 @@ footer {
   margin-left: 80px;
   i {
     margin: 2em 1em;
+  }
+  i:hover {
+    color: $button-color;
   }
 }
 /* MEDIA QUERY */

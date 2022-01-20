@@ -104,6 +104,11 @@ nav ul li {
           box-sizing: border-box;
   margin: auto;
   border-radius: 3px;
+  cursor: pointer;
+}
+
+.card-1 form button:hover {
+  background-color: #80aefa;
 }
 
 .card-2 {
@@ -145,6 +150,10 @@ nav ul li {
   width: 7%;
   position: relative;
   top: 6px;
+}
+
+.card-2 a:hover {
+  opacity: 0.6;
 }
 
 .review {
@@ -249,6 +258,11 @@ nav ul li {
   background-color: #3065f8;
   border: 1px solid #3065f8;
   border-radius: 3px;
+  cursor: pointer;
+}
+
+.card-3 form button:hover {
+  background-color: #80aefa;
 }
 
 footer {
@@ -281,6 +295,10 @@ footer .email img {
   height: fit-content;
 }
 
+.extras p:hover {
+  color: #585989;
+}
+
 .ext-1 {
   margin: 2em 0;
 }
@@ -291,6 +309,10 @@ footer .email img {
 
 .social i {
   margin: 2em 1em;
+}
+
+.social i:hover {
+  color: #3065f8;
 }
 
 /* MEDIA QUERY */
